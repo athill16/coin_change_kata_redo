@@ -15,4 +15,8 @@ class TestCoinChange < Minitest::Test
 		assert_equal({"Quarters" => 0, "Dimes" => 0, "Nickels" => 1, "Pennies" => 1}, evaluate_change(6))
 	end
 
+	def test_change_for_10
+		assert_equal({"Quarters" => 0, "Dimes" => 1, "Nickels" => 0, "Pennies" => 0}, evaluate_change(10))
+	end
+
 end
